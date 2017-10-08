@@ -16,6 +16,8 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
+use Cake\Core\Configure;
+use Cake\Routing\Router;
 
 /**
  * Application Controller
@@ -27,6 +29,15 @@ use Cake\Event\Event;
  */
 class AppController extends Controller
 {
+    
+    /** @var object $controller Controller name. */
+    public $controller = null;
+
+    /** @var object $action Action name. */
+    public $action = null;
+    public $session = null;
+    public $current_url = '';
+    public $BASE_URL = '';
 
     /**
      * Initialization hook method.
@@ -51,6 +62,25 @@ class AppController extends Controller
         //$this->loadComponent('Security');
         //$this->loadComponent('Csrf');
     }
+    
+    /**
+     * Before filter event
+     * @param Event $event
+     */
+    public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+        
+        // Start session
+//        if (empty($this->request->session()->id())) {
+//            $this->request->session()->start();
+//        }
+        
+//        $this->session = $this->request->session();
+        $this->controller = strtolower($this->request->params['controller']);
+        $this->action = strtolower($this->request->params['action']);
+        $this->current_url = Router::url($this->here, true);
+        $this->BASE_URL = Router::fullBaseUrl();
+    }
 
     /**
      * Before render callback.
@@ -67,6 +97,28 @@ class AppController extends Controller
             in_array($this->response->type(), ['application/json', 'application/xml'])
         ) {
             $this->set('_serialize', true);
+        }
+        
+        // Set common param
+//        $this->set('session', $this->session);
+//        $this->set('cookie', $this->Cookie);
+        $this->set('controller', $this->controller);
+        $this->set('action', $this->action);
+        $this->set('current_url', $this->current_url);
+        $this->set('BASE_URL', $this->BASE_URL);
+        
+        // Set default layout
+        $this->setLayout();
+    }
+    
+    /**
+     * Common function set layout for view.
+     */
+    public function setLayout() {
+       if ($this->controller == 'ajax') {
+            $this->viewBuilder()->layout('ajax');
+        } else {
+            $this->viewBuilder()->layout('maishop');
         }
     }
 }
