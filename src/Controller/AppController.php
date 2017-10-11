@@ -106,6 +106,7 @@ class AppController extends Controller
         $this->set('action', $this->action);
         $this->set('current_url', $this->current_url);
         $this->set('BASE_URL', $this->BASE_URL);
+        $this->set('isMobile', $this->isMobile());
         
         // Set default layout
         $this->setLayout();
@@ -120,5 +121,9 @@ class AppController extends Controller
         } else {
             $this->viewBuilder()->layout('maishop');
         }
+    }
+    
+    public function isMobile() {
+        return $this->RequestHandler->isMobile();
     }
 }

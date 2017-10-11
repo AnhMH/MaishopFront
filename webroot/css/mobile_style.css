@@ -1,0 +1,10 @@
+#body_home_index {
+    overflow: auto;
+}
+#body_home_index .carousel,
+#body_home_index .carousel .carousel-inner,
+#body_home_index .carousel .carousel-inner>.item,
+#body_home_index .carousel .carousel-inner>.item>a>img, 
+#body_home_index .carousel .carousel-inner>.item>img {
+    height: auto;
+}

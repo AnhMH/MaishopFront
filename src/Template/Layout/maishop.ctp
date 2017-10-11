@@ -7,6 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="<?php echo $BASE_URL;?>/css/style.css?<?php echo FILE_VERSION;?>" rel="stylesheet" type="text/css">
+        <?php if (!empty($isMobile)): ?>
+        <link href="<?php echo $BASE_URL;?>/css/mobile_style.css?<?php echo FILE_VERSION;?>" rel="stylesheet" type="text/css">
+        <?php endif;?>
     </head>
     <body id="body_<?php echo $controller . '_' . $action; ?>">
         
