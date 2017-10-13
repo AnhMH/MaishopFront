@@ -14,7 +14,7 @@
             <div class="product-deatil">
                 <h5 class="name">
                     <a href="#">
-                        Product Code/Name here
+                        Product Code/Name here <?php echo !empty($id) ? $id : '';?>
                     </a>
                     <a href="#">
                         <span>Product Category</span>
@@ -32,8 +32,8 @@
             <div class="product-info smart-form">
                 <div class="row">
                     <div class="col-md-12"> 
-                        <!--<a href="javascript:void(0);" class="btn btn-danger">Add to cart</a>-->
-                        <a href="javascript:void(0);" class="btn btn-info btn-view-more" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Loading...">More info</a>
+                        <a href="javascript:void(0);" class="btn btn-danger">Add to cart</a>
+                        <a href="javascript:void(0);" class="btn btn-info btn-view-more">More info</a>
                     </div>
                     <div class="col-md-12">
                         <div class="rating">Rating:

@@ -57,7 +57,9 @@
     <div class="col-sm-10">
         <div class="contained">
             <?php for ($i = 0; $i < 10; $i++): ?>
-                <?php echo $this->element("product"); ?>
+                <div class="col-xs-12 col-md-6">
+                    <?php echo $this->element("product"); ?>
+                </div>
             <?php endfor; ?>
         </div>
     </div>
