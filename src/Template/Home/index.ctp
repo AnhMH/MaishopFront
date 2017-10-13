@@ -24,95 +24,59 @@
         </a>
     </div>
 <?php endif; ?>
-<?php if (empty($isMobile)): ?>
-    <div class="home_menu">
-        <div class="home_menu_close">x</div>
-        <div class="home_menu_image" id="home_menu_image_1">
-            <a href="#">
-                <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
-            </a>
-        </div>
-        <div class="home_menu_image" id="home_menu_image_2">
-            <a href="#">
-                <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
-            </a>
-        </div>
-        <div class="home_menu_image" id="home_menu_image_3">
-            <a href="#">
-                <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
-            </a>
-        </div>
-        <div class="home_menu_image" id="home_menu_image_4">
-            <a href="#">
-                <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
-            </a>
-        </div>
-        <div class="">
-            <div class="home_menu_text" data-image="1">Giá dưới 1m</div>
-            <div class="home_menu_text" data-image="2">Giá từ 1-2m</div>
-            <div class="home_menu_text" data-image="3">Giá từ 2-4m</div>
-            <div class="home_menu_text" data-image="4">Giá trên 4m</div>
-        </div>
+
+<div class="home_menu">
+    <div class="home_menu_close">x</div>
+    <div class="home_menu_image" id="home_menu_image_1">
+        <a href="#">
+            <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
+        </a>
     </div>
-<?php else: ?>
-    <div class="home_menu_mobile" id="accordion">
-        <div class="panel-group">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Giá dưới 1m</a>
-                    </h4>
-                </div>
-                <div id="collapse1" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <a href="#">
-                            <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Giá từ 1-2m</a>
-                    </h4>
-                </div>
-                <div id="collapse2" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <a href="#">
-                            <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Giá từ 2-4m</a>
-                    </h4>
-                </div>
-                <div id="collapse3" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <a href="#">
-                            <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Giá trên 4m</a>
-                    </h4>
-                </div>
-                <div id="collapse4" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <a href="#">
-                            <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="home_menu_image" id="home_menu_image_2">
+        <a href="#">
+            <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
+        </a>
     </div>
-<?php endif; ?>
+    <div class="home_menu_image" id="home_menu_image_3">
+        <a href="#">
+            <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
+        </a>
+    </div>
+    <div class="home_menu_image" id="home_menu_image_4">
+        <a href="#">
+            <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
+        </a>
+    </div>
+    <div class="">
+        <div class="home_menu_text" data-image="1">Giá dưới 1m</div>
+        <div class="home_menu_text" data-image="2">Giá từ 1-2m</div>
+        <div class="home_menu_text" data-image="3">Giá từ 2-4m</div>
+        <div class="home_menu_text" data-image="4">Giá trên 4m</div>
+    </div>
+</div>
+<ul class="home_menu_mobile">
+    <li>
+        <a href="#">
+            <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
+            <h4>Giá dưới 1m</h4>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
+            <h4>Giá từ 1-2m</h4>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
+            <h4>Giá từ 2-4m</h4>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" />
+            <h4>Giá trên 4m</h4>
+        </a>
+    </li>
+</ul>
