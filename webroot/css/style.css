@@ -21,11 +21,11 @@ h3, h4 {
     position: relative;
     overflow: hidden;
 }
-#body_home_index .carousel,
-#body_home_index .carousel .carousel-inner,
-#body_home_index .carousel .carousel-inner>.item,
-#body_home_index .carousel .carousel-inner>.item>a>img, 
-#body_home_index .carousel .carousel-inner>.item>img {
+.carousel,
+.carousel .carousel-inner,
+.carousel .carousel-inner>.item,
+.carousel .carousel-inner>.item>a>img, 
+.carousel .carousel-inner>.item>img {
     height: 100%;
 }
 .carousel-inner img {
@@ -392,7 +392,6 @@ h3, h4 {
     height: 100%;
     background: rgba(0,0,0, 0.8);
     overflow: hidden;
-    display: none;
 }
 .loader,
 .loader:before,

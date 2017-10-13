@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-5 col-sm-12 col-xs-12">
             <div class="product-image"> 
-                <img src="<?php echo $BASE_URL; ?>/img/home_img.jpg" class="img-responsive"> 
+                <img src="<?php echo $BASE_URL; ?>/img/slider1.jpg" class="img-responsive"> 
                 <span class="tag2 hot">
                     HOT
                 </span> 
