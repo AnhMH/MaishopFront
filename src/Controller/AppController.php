@@ -116,10 +116,12 @@ class AppController extends Controller
      * Common function set layout for view.
      */
     public function setLayout() {
-       if ($this->controller == 'ajax') {
+        if ($this->controller == 'ajax') {
             $this->viewBuilder()->layout('ajax');
-        } else {
+        } if (in_array($this->controller, array('home'))) {
             $this->viewBuilder()->layout('maishop');
+        } else {
+            $this->viewBuilder()->layout('default');
         }
     }
     
